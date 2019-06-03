@@ -18,3 +18,14 @@ Route::get('/', function () {
 Route::get('/teams',['as' => 'teams-list','uses' => 'TeamsController@index']);
 
 Route::get('/teams/{id}',['as' => 'team','uses' => 'TeamsController@show']);
+
+Route::get('/register','RegisterController@create');
+
+Route::post('/register','RegisterController@store');
+
+Route::get('/login','LoginController@log');
+
+Route::post('/login','LoginController@store');
+
+Route::get('/logout','LoginController@destroy');
+
