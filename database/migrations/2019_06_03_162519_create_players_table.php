@@ -18,8 +18,8 @@ class CreatePlayersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->unsignedBiginteger('teams_id');
-            $table->foreign('teams_id')
+            $table->unsignedBiginteger('team_id');
+            $table->foreign('team_id')
                 ->references('id')
                 ->on('teams')
                 ->onDelete('cascade');
