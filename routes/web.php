@@ -29,3 +29,5 @@ Route::post('/login','LoginController@store');
 
 Route::get('/logout','LoginController@destroy');
 
+Route::get('/player/{id}','PlayersController@show');
+

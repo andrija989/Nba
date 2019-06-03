@@ -15,9 +15,9 @@
         <ul>
             @foreach ($team->players as $player)
                 <li>
-                    <p class="player">
+                    <a href="/player/{{$player->id}}" class="player">
                         Full name: {{$player->first_name}} {{$player->last_name}}
-                    </p>
+                    </a>
                     
                 </li>
             @endforeach
