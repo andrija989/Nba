@@ -5,10 +5,10 @@
   
     <div style="text-align: center">
       <a href="/teams" class="btn btn-primary">Teams</a>
-      @if(!Auth::check())
+      
       <a href="/register" class="btn btn-primary">Register</a>
       <a href="/login" class="btn btn-primary">Login</a>
-      @endif
+      
       @if(Auth::check())
         <p>
           User: {{Auth()->user()->name}}

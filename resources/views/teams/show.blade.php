@@ -24,4 +24,31 @@
         </ul>
     @endif
 
+    @if(count($team->comments))
+        <h4>Comments:</h4>
+        <ul>
+            @foreach ($team->comments as $comment)
+                <li>
+                    <p>
+                        {{$comment->content}}
+                    </p class="comment">
+                </li>
+            @endforeach
+        </ul>
+    @endif
+
+    <h4>Post a comment</h4>
+
+    <form method="POST" action="{{route('comments-team', ['post_id' => $team->id])}}">
+        @csrf
+
+        <div class="form-group">
+            <label for="content">Text</label>
+            <textarea class="form-control" id="content" name="content"></textarea>
+        </div>
+
+        <div class="form-control">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
 @endsection

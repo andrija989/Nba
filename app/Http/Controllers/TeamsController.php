@@ -10,9 +10,9 @@ class TeamsController extends Controller
 {
     public function __consturct()
     {
-        $this->middleware('auth',['except' => ['index', 'show']]);
+        $this->middleware('auth',['only' => ['create', 'store']]);
     }
-    
+
     public function index(){
         $teams = Team::all();
 
