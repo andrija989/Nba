@@ -19,7 +19,7 @@ Route::get('/teams',['as' => 'teams-list','uses' => 'TeamsController@index']);
 
 Route::get('/teams/{id}',['as' => 'team','uses' => 'TeamsController@show']);
 
-Route::get('/register','RegisterController@create');
+Route::get('/register',['as' => 'register-form','uses' => 'RegisterController@create']);
 
 Route::post('/register','RegisterController@store');
 

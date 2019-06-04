@@ -27,6 +27,13 @@ class RegisterController extends Controller
         $user->name = request('name');
         $user->email = request('email');
         $user->password = bcrypt(request('password'));
+
+        if(request("password")!=request("password_confirmation"))
+        {
+            session()->flash("message", "Password and password-verification are not identical, please try again");
+            return redirect()->route("register-form");
+        }
+
         $user->save();
         auth()->login($user);
         
