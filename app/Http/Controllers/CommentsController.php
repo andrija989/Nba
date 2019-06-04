@@ -19,6 +19,6 @@ class CommentsController extends Controller
         $comment->team_id = $teamId;
         $comment->save();
 
-        return redirect()->route('team-details', ['id' => $teamId]);
+        return redirect()->route('team', ['id' => $teamId]);
     }
 }

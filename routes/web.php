@@ -31,5 +31,5 @@ Route::get('/logout','LoginController@destroy');
 
 Route::get('/player/{id}','PlayersController@show');
 
-Route::post('/teams/{team_id}/comments', ['as' => 'comments-team','uses'=> 'CommentsController@store']);
+Route::post('/teams/{team_id}/comments', ['as' => 'comments-team','uses'=> 'CommentsController@store'])->middleware("block");;
 

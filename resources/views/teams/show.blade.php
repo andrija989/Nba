@@ -32,6 +32,9 @@
                     <p>
                         {{$comment->content}}
                     </p class="comment">
+                    <p>
+                        Posted by: {{$comment->user->name}}
+                    </p>
                 </li>
             @endforeach
         </ul>
