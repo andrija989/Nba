@@ -33,3 +33,8 @@ Route::get('/player/{id}','PlayersController@show');
 
 Route::post('/teams/{team_id}/comments', ['as' => 'comments-team','uses'=> 'CommentsController@store'])->middleware("block");;
 
+// News rootes
+
+Route::get('/news',['as' => 'news-list','uses' => 'NewsController@index']);
+
+Route::get('/news/{id}',['as' => 'news','uses' => 'NewsController@show']);
