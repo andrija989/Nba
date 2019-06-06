@@ -38,3 +38,7 @@ Route::post('/teams/{team_id}/comments', ['as' => 'comments-team','uses'=> 'Comm
 Route::get('/news',['as' => 'news-list','uses' => 'NewsController@index']);
 
 Route::get('/news/{id}',['as' => 'news','uses' => 'NewsController@show']);
+
+// Tags Root
+
+Route::get('/tags/{id}',['as' => 'tags','uses' => 'TagsController@show']);
