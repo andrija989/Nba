@@ -5,9 +5,9 @@
     <h2>{{$team->name}}</h2>
 
     <div>
-        <p>{{$team->email}}</p>
-        <p>{{$team->adress}}</p>
-        <p>{{$team->city}}</p>
+        <p>email: {{$team->email}}</p>
+        <p>adress: {{$team->adress}}</p>
+        <p>city: {{$team->city}}</p>
     </div>
     
     @if(count($team->players))
