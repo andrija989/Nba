@@ -5,7 +5,8 @@
   
     <div style="text-align: center">
       <a href="/teams" class="btn btn-primary">Teams</a>
-      
+      <a href="/news" class="btn btn-primary">News</a>
+      <a href="/news/create" class="btn btn-primary">News Create</a>
       <a href="/register" class="btn btn-primary">Register</a>
       <a href="/login" class="btn btn-primary">Login</a>
       

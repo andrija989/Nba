@@ -14,7 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+// News Create + tags
+Route::get('/news/create',['as'=>'create-news','uses'=>'NewsController@create']);
 
+Route::post('/news', ['as'=> 'store-news', 'uses'=>'NewsController@store']);
+
+// Teams Root
 Route::get('/teams',['as' => 'teams-list','uses' => 'TeamsController@index']);
 
 Route::get('/teams/{id}',['as' => 'team','uses' => 'TeamsController@show']);

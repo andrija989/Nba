@@ -21,6 +21,18 @@
     @endforeach
 @endif
 
+<nav class="blog-pagination">
+    <a class="btn btn-outline-{{ $pagination->currentPage() === 1 ? 'disabled' : 'primary' }}" 
+        href="{{ $pagination->previousPageUrl() }}">
+        Previous
+    </a>
 
+    <a class="btn btn-outline-{{ $pagination->hasMorePages() ? 'primary' : 'disabled' }}" 
+        href="{{ $pagination->nextPageUrl() }}">
+        Next
+    </a>
+
+    Page {{ $pagination->currentPage() }} of {{ $pagination->lastPage() }}
+</nav>
 
 @endsection
